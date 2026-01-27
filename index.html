@@ -28,7 +28,20 @@
   .top-bar .menu {
     display: flex !important;
     flex-wrap: nowrap;
-    gap: 2.5rem;
+    gap: 2rem;
+  }
+  .top-bar,
+  .top-bar-left,
+  .top-bar-right,
+  .top-bar .menu {
+    display: flex;
+    align-items: center;
+  }
+  .top-bar .menu-text,
+  .top-bar .menu a {
+    line-height: 1;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
   .top-bar .menu > li {
     margin-right:1.5rem;
