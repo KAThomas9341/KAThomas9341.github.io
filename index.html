@@ -23,10 +23,19 @@
   .top-bar {
     background-color: #0f0638
   }
-  .top-bar .menu {
-    width: 100%;
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .top-bar-left,
+  .top-bar-right {
     display: flex !important;
-    Justify-content: space-evenly;
+    align-items: center;
+  }
+  .top-bar .menu {
+    display: flex !important;
+    flex-wrap: nowrap;
     gap: 0rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
@@ -37,18 +46,21 @@
     display: flex;
     align-items: center;
   }
+  .top-bar .menu-text,
   .top-bar .menu a {
     line-height: 1.4;
     padding: 0.75rem 0;
   }
   .top-bar .menu > li {
-    margin: 0;
+    margin-right: 0rem;
   }
+  .top-bar,
   .top-bar ul {
     background-color: #0f0638;
   }
   .top-bar a,
-  .top-bar .menu-text {
+  .top-bar .menu-text,
+  .top-bar .menu > li > a {
     color: aliceblue !important;
   }
   .top-bar a:hover,
@@ -109,12 +121,17 @@ h1, h2, h3 {
               <li class="menu-text">Katherine Thomas</li>
               <li><a href="#">Home</a></li>
               <li><a href="#">About Me</a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul class="menu">
               <li><a href="#">Experience</a></li>
               <li><a href="#">Education</a></li>
               <li><a href="#">Skills</a></li>
               <li><a href="#">Resume</a></li>
             </ul>
           </div>
+        </div>
         <!-- End Top Bar -->
     
         <div class="callout large">
